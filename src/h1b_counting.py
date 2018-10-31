@@ -62,11 +62,10 @@ if __name__ == "__main__":
 
     read_configuration(config)
     path = config['input_path'] + config['input_file_name']
-    row_break = config['row_separator']
 
     # process_data method is the callback method.
     # It will be called for each chunk of lines, with parameter data representing chunk of lines of the file at a time
-    data_loader.read_lines_as_chunks(path, row_break, chunk_size=int(config['CHUNK_SIZE']), callback=process_data)
+    data_loader.read_lines_as_chunks(path, config['row_separator'], chunk_size=int(config['CHUNK_SIZE']), callback=process_data)
 
     top_states_heap = max_heap.MaxHeap([])
     top_jobs_heap = max_heap.MaxHeap([])
