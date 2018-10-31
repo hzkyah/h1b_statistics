@@ -1,7 +1,7 @@
 #all lines starting with # are descriptions. Everthing else is a configuration parameter.
 field_separator = ;
 row_separator = \n
-input_path = ./inpu/
+input_path = ./input/
 output_path = ./output/
 input_file_name = h1b_input.csv
 output_1 = top_10_occupations.txt
