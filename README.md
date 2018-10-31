@@ -1,5 +1,5 @@
 # h1b_statistics
-Python solution program for the h1b_statistics coding challenge of Insight Data Engineering
+Python program for the h1b_statistics coding challenge of Insight Data Engineering
 
 Please modify values of config.txt to configure : <br>
   input file name, <br>
