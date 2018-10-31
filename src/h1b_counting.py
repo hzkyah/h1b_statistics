@@ -34,15 +34,15 @@ def build_heap(top_heap, aggregates, size, coded):
             key = job_titles[key]
         top_heap.push((key, value))
 
-
 # output to file or console
 def output(top_heap, path, header, size):
-    print(header, file=open(path, "w"))
-    for i in range(int(size)):
-        top = top_heap.pop()
-        if top:
-            percentage = top[1]/config['total'] * 100
-            print(str(top[0]) + ';' + str(top[1]) + ';' + str(round(percentage, 1)) + '%', file=open(path, "a"))
+    with open(path, "w") as file:
+        print(header, file=file)
+        for i in range(int(size)):
+            top = top_heap.pop()
+            if top:
+                percentage = top[1]/config['total'] * 100
+                print(str(top[0]) + ';' + str(top[1]) + ';' + str(round(percentage, 1)) + '%', file=file)
 
 
 # fill initial configuration parameters from config.txt
