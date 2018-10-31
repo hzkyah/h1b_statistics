@@ -1,0 +1,23 @@
+#all lines starting with # are descriptions. Everthing else is a configuration parameter.
+field_separator = ;
+row_separator = \n
+input_path = .\/input\/
+output_path = .\/output\/
+input_file_name = h1b_input.csv
+output_1 = top_10_occupations.txt
+output_2 = top_10_states.txt
+output_1_header = TOP_OCCUPATIONS;NUMBER_CERTIFIED_APPLICATIONS;PERCENTAGE
+output_2_header = TOP_STATES;NUMBER_CERTIFIED_APPLICATIONS;PERCENTAGE
+output_size = 10
+# configure this value depending on your machine's memory capacity or hardware configuration
+CHUNK_SIZE = 1000000
+# alternative field header naming can be specified here
+case_names = Approval_Status;STATUS;CASE_STATUS
+job_codes = Occupation_Code;LCA_CASE_SOC_CODE;SOC_CODE
+job_names = Occupational_Title;LCA_CASE_SOC_NAME;SOC_NAME
+site_names = State_1;LCA_CASE_WORKLOC1_STATE;WORKSITE_STATE
+case_index = 0
+job_index = 0
+title_index = 0
+site_index = 0
+total = 0
