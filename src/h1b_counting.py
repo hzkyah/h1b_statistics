@@ -47,7 +47,7 @@ def output(top_heap, path, header, size):
 
 # fill initial configuration parameters from config.txt
 def read_configuration(configuration):
-    with open("config.txt") as configfile:
+    with open('config.txt') as configfile:
         for line in configfile:
             if line[0] == '#':
                 continue
